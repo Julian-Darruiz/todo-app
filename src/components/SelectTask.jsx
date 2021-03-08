@@ -15,7 +15,7 @@ const SelectTask = () => {
         </>
         // <div>
         //     {tasks.map(task => {
-        //     return <li key={task}><input type="checkbox" />task</li>
+        //     return <li key={task}><input type="checkbox" />{task}</li>
         // })}
         // </div>
     )

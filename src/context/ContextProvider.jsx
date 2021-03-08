@@ -7,9 +7,7 @@ export const ContextProvider =  ({children}) => {
   const [tasks, setTasks] = useState([])
 
   const handleChange = (e) =>{
-    setTasks(e.target.value)
-    console.log(tasks)
-
+    tasks.split().push(setTasks(e.target.value))
   }
 
   const handleSubmit = (e) =>{
