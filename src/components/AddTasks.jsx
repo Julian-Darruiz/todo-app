@@ -2,14 +2,18 @@ import React, { useContext } from "react";
 import Context from "../context/ContextProvider";
 
 import "../App.css";
+import SelectTask from "./SelectTask";
 
 const AddTask = () => {
-const {handleSubmit, handleChange} = useContext(Context)
+const {handleSubmit } = useContext(Context)
   return (
+    <>
     <form onSubmit={handleSubmit}>
-      <input type="text" name="addtask"  onChange={handleChange}/>
-      <input type="submit" value="Add" />
+      <input type="text" name="addtask" />
+      <button type="submit">Add</button>
     </form>
+    <SelectTask/>
+    </>
   );
 }
 

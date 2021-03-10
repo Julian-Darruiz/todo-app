@@ -1,34 +1,27 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState} from "react";
+
 
 const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState([]);
  
-  const listTasks = [];
   
-  const handleChange = (e) =>{
-    // setTasks({
-      // form: {...tasks.form,
-      // [e.target.name] : e.target.value},
-      // listTasks:[listTasks.push(tasks.form)]})
-      console.log(e)
-      
-    }
-    
+  
+  // const handleChange = (e) =>{
+  //   setTask(e.target.value)
+  //   // setTask(e.target.value)
+  // }
     
     
     const handleSubmit = (e) => {
-      e.preventDefault();  
-      setTasks({
-        form: {...tasks.form,
-        [e.target[0].name] : e.target[0].value},
-        listTasks:[listTasks.push(e.target[0].value)]
-      })
-      console.log(listTasks)
-  };
+      e.preventDefault(e)
+      setTask([e.target[0].value, ...task])
+      console.log(task)
+  }
+
   return (
-    <Context.Provider value={{ tasks, handleChange, handleSubmit }}>
+    <Context.Provider value={{ task, handleSubmit}}>
       {children}
     </Context.Provider>
   );

@@ -1,17 +1,16 @@
-// import React, { useContext } from "react";
-// import Context from "../context/ContextProvider";
+import React, { useContext } from "react";
+import Context from "../context/ContextProvider";
 
 const SelectTask = () => {
-  // const { tasks } = useContext(Context);
-  // console.log(tasks);
+  const { task } = useContext(Context);
 
   return (
+  
     <div>
-        {/* <li>
-          <input type="checkbox" />
-          {tasks}
-        </li> */}
+      {task.map(task => <li key={task}> {task} </li>)}
     </div>
+    
+  
   )
 };
 
